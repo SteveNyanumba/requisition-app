@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class CategoriesController extends Controller
+class TypesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        // return Inertia::render('Categories/Index',[
-        //     'categories'=>Category::all(),
-        // ]);
+        //
     }
 
     /**
@@ -27,7 +25,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Categories/Create');
+        return Inertia::render('Types/Create');
     }
 
     /**
@@ -39,12 +37,12 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title'=>'required|unique:categories,title'
+            'title'=>'required|unique:types,title'
         ]);
 
-        $category = new Category();
-        $category->title = $request->title;
-        $category->save();
+        $type = new Type();
+        $type->title = $request->title;
+        $type->save();
         return redirect()->route('dashboard');
     }
 
@@ -67,9 +65,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        return Inertia::render('Categories/Edit', [
-            'category'=>Category::find($id)
-        ]);
+        return Inertia::render('Types/Edit');
     }
 
     /**
@@ -82,12 +78,12 @@ class CategoriesController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title'=>'required|unique:categories,title'
+            'title'=>'required|unique:types,title'
         ]);
 
-        $category = Category::find($id);
-        $category->title = $request->title;
-        $category->save();
+        $type = Type::find($id);
+        $type->title = $request->title;
+        $type->save();
         return redirect()->route('dashboard');
     }
 
@@ -99,7 +95,7 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        Category::find($id)->delete();
+        Type::find($id)->delete();
         return redirect()->route('dashboard');
     }
 }

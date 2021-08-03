@@ -20,8 +20,14 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
-                                <jet-nav-link :href="route('item_categories.index')" :active="route().current('item_categories.index') || route().current('item_categories.create') || route().current('item_categories.edit') ">
+                                <jet-nav-link :href="route('item_categories.create')" :active="route().current('item_categories.create') || route().current('item_categories.edit') ">
                                     Item categories
+                                </jet-nav-link>
+                                <jet-nav-link :href="route('types.create')" :active="route().current('types.create') || route().current('types.edit')">
+                                    Store types
+                                </jet-nav-link>
+                                <jet-nav-link :href="route('items.index')" :active="route().current('items.index') || route().current('items.create') || route().current('items.edit')">
+                                    Items
                                 </jet-nav-link>
                             </div>
                         </div>
@@ -146,8 +152,14 @@
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </jet-responsive-nav-link>
-                        <jet-responsive-nav-link :href="route('item_categories.index')" :active="route().current('item_categories.index')">
+                        <jet-responsive-nav-link :href="route('item_categories.create')" :active="route().current('item_categories.create') || route().current('item_categories.edit')">
                             Item Categories
+                        </jet-responsive-nav-link>
+                        <jet-responsive-nav-link :href="route('types.create')" :active="route().current('types.create') || route().current('types.edit')">
+                            Store types
+                        </jet-responsive-nav-link>
+                        <jet-responsive-nav-link :href="route('items.index')" :active="route().current('items.index') || route().current('items.create') || route().current('items.edit')">
+                            Items
                         </jet-responsive-nav-link>
                     </div>
 

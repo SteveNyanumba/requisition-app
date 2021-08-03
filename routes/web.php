@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Category;
+use App\Models\Type;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +28,14 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified', 'admin'])->group(function (){
     Route::get('/dashboard', function(){
-        return Inertia::render('Dashboard');
+        return Inertia::render('Dashboard', [
+            'Categories'=>Category::all(),
+            'Types'=>Type::all(),
+
+        ]);
     })->name('dashboard');
 
     Route::resource('item_categories', 'App\Http\Controllers\CategoriesController');
+    Route::resource('types', 'App\Http\Controllers\TypesController');
+    Route::resource('items', 'App\Http\Controllers\ItemsController');
 });

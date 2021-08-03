@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cfc5fc8209eb96bb187bead7cf7f595",
+    "content-hash": "6741ce398aa6b1d36cf8ff0484376d09",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1224,16 +1224,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.48.1",
+            "version": "v8.48.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "edc138060a13c9e5f15c005fad5f6a39b4ccf5fa"
+                "reference": "4c50ebbb7d1a66c5f3511261413cd499d30ba4cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/edc138060a13c9e5f15c005fad5f6a39b4ccf5fa",
-                "reference": "edc138060a13c9e5f15c005fad5f6a39b4ccf5fa",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4c50ebbb7d1a66c5f3511261413cd499d30ba4cd",
+                "reference": "4c50ebbb7d1a66c5f3511261413cd499d30ba4cd",
                 "shasum": ""
             },
             "require": {
@@ -1388,7 +1388,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-06-23T13:41:59+00:00"
+            "time": "2021-06-25T23:57:38+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -1591,16 +1591,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.6.4",
+            "version": "1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "c3c8b7217c52572fb42aaf84211abccf75a151b2"
+                "reference": "44ffd8d3c4a9133e4bd0548622b09c55af39db5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c3c8b7217c52572fb42aaf84211abccf75a151b2",
-                "reference": "c3c8b7217c52572fb42aaf84211abccf75a151b2",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/44ffd8d3c4a9133e4bd0548622b09c55af39db5f",
+                "reference": "44ffd8d3c4a9133e4bd0548622b09c55af39db5f",
                 "shasum": ""
             },
             "require": {
@@ -1688,7 +1688,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-19T20:08:14+00:00"
+            "time": "2021-06-26T11:57:13+00:00"
         },
         {
             "name": "league/flysystem",
@@ -8025,6 +8025,62 @@
             "time": "2020-09-28T06:39:44+00:00"
         },
         {
+            "name": "squizlabs/php_codesniffer",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "bin": [
+                "bin/phpcs",
+                "bin/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "support": {
+                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+            },
+            "time": "2021-04-09T00:54:41+00:00"
+        },
+        {
             "name": "theseer/tokenizer",
             "version": "1.2.0",
             "source": {
@@ -8084,5 +8140,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

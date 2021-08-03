@@ -51,15 +51,8 @@
             }
         },
         methods:{
-            async createCategory(){
-                try {
-                    const res = await axios.post('item_categories.store', this.form)
-                    if(res.status == 200){
-                        console.log('success')
-                    }
-                } catch (err) {
-                    console.log(err)
-                }
+            createCategory(){
+                this.$inertia.post('/item_categories', this.form)
             }
         }
 

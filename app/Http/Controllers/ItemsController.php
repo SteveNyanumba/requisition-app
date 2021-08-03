@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Item;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class CategoriesController extends Controller
+class ItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        // return Inertia::render('Categories/Index',[
-        //     'categories'=>Category::all(),
-        // ]);
+        return Inertia::render('Items/Index',[
+            'Items'=>Item::all()
+        ]);
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Categories/Create');
+        return Inertia::render('Items/Create');
     }
 
     /**
@@ -38,14 +38,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'title'=>'required|unique:categories,title'
-        ]);
-
-        $category = new Category();
-        $category->title = $request->title;
-        $category->save();
-        return redirect()->route('dashboard');
+        //
     }
 
     /**
@@ -67,9 +60,7 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        return Inertia::render('Categories/Edit', [
-            'category'=>Category::find($id)
-        ]);
+        //
     }
 
     /**
@@ -81,14 +72,7 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'title'=>'required|unique:categories,title'
-        ]);
-
-        $category = Category::find($id);
-        $category->title = $request->title;
-        $category->save();
-        return redirect()->route('dashboard');
+        //
     }
 
     /**
@@ -99,7 +83,6 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        Category::find($id)->delete();
-        return redirect()->route('dashboard');
+        //
     }
 }
